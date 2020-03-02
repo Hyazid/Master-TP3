@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/Mon%20pc/Desktop/cours/javascript/tp3homework/book1.xsd">
+<book isbn="AB9781418860646">
+<title type="P">XML Comprehensive Step by Step</title>
+<edition>2</edition>
+<author>
+<first>Ahmed</first>
+<middle>r</middle>
+<last>Amara</last>
+</author>
+<publishedDate>
+<month>7</month>
+<day>9</day>
+<year>2007</year>
+</publishedDate>
+<type>nonfiction</type>
+<price>70</price>
+</book>
+<book isbn="AB9780132240857">
+<title type="H">Systems Analysis and Design for Dummies</title>
+<edition>7</edition>
+<author>
+<first>Kemal</first>
+<middle>B</middle>
+<last>Kendali</last>
+</author>
+<author>
+<first>Djamel</first>
+<middle>T</middle>
+<last>Kendali</last>
+</author>
+<publishedDate>
+<month>3</month>
+<day>27</day>
+<year>2007</year>
+</publishedDate>
+<type>nonfiction</type>
+<price>166.67</price>
+</book>
+<book isbn="AB9780805001112">
+<title type="P">The World Map Trap</title>
+<author>
+<first>Peri</first>
+<middle>F</middle>
+<last>Rais</last>
+</author>
+<publishedDate>
+<month>9</month>
+<day>15</day>
+<year>1986</year>
+</publishedDate>
+<type>fiction</type>
+<price>14</price>
+</book>
+</books>

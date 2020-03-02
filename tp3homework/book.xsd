@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="books">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="book" minOccurs="0" maxOccurs="unbounded">
+          <xs:attribute name="isnb" type="xs:ID" use="required"/>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" type="xs:string">
+                <xs:attibute>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="p|h"/>
+                  </xs:restriction>
+                </xs:attibute>
+              </xs:element>
+              <xs:element name="edition">
+                <xs:simpleType >
+                  <xs:restriction base="xs:integer">
+                     <xs:minInclusive value="1"/>
+                     <xs:maxInclusive value="256"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="author" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                  <xs:element name="first" type="xs:string"/>
+                  <xs:element name="middle" type="xs:string"/>
+                  <xs:element name="last" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="publishedDate">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="month">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="1"/>
+                          <xs:maxInclusive value="12"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="day">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="1"/>
+                          <xs:maxInclusive value="30"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="year" type="gYear"></xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="type">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:pattern value="fiction|nonfiction"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" type="decimal"/>
+              
+            
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
